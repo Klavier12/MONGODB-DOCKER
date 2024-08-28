@@ -1,0 +1,47 @@
+#Crear el archivo docker-compose.yml
+touch docker-compose.yml
+nano docker-compose.yml
+
+#Escribir contenido en el archivo
+
+version: '2.2'
+
+services:
+  mongo:
+    image: mongo:4.0.4
+    restart: always
+    container_name: monguito
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+    volumes:
+      - ./monguitodata:/data/db
+    ports:
+      - "27017:27017"
+
+#Crear el archivo mongo.sh
+
+touch mongo.sh
+nano mongo.sh
+
+#!/bin/bash
+
+# Crear carpeta para volumen de mongo:
+mkdir -p monguitodata/log && cd monguitodata
+
+cd
+
+# Iniciar el contenedor:
+sudo docker-compose up -d
+
+# Mostrar mensaje:
+echo "Monguito está iniciandose ......."
+
+# Entrar en el contenedor:
+sudo docker exec -it monguito bash
+
+#Asignar permisos de ejecución al script mongo.sh
+chmod u+x mongo.sh
+
+#Ejecutar el script mongo.sh
+./mongo.sh
