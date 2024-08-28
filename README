@@ -1,0 +1,26 @@
+# Proyecto: Contenedor MongoDB en Linux
+
+## Descripción
+
+Este proyecto configura un contenedor de MongoDB utilizando Docker en un entorno Linux. Incluye archivos de configuración y scripts para facilitar el despliegue de un contenedor MongoDB, la gestión de datos persistentes y la interacción con el contenedor.
+
+## Requisitos
+
+- [Docker](https://docs.docker.com/get-docker/) (versión 19.03 o superior)
+- [Docker Compose](https://docs.docker.com/compose/install/) (versión 1.27 o superior)
+
+## Estructura del Proyecto
+
+- **`docker-compose.yml`**: Archivo de configuración de Docker Compose que define los servicios de MongoDB, incluyendo la imagen, variables de entorno, volúmenes y puertos.
+- **`mongo.sh`**: Script para iniciar el contenedor y realizar configuraciones básicas.
+
+## Instalación y Configuración
+
+1. **Clonar el Repositorio**
+
+   Clona este repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio
+
