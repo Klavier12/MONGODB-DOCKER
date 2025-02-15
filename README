@@ -18,7 +18,7 @@ Este proyecto configura un contenedor de MongoDB utilizando Docker en un entorno
 
 1. **Clonar el Repositorio**
 
-   Clona este repositorio en tu máquina local:
+   Clona este repositorio en tu máquina local
 
    ```bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
